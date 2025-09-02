@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, ExternalLink, Code, Palette, Zap, User, Briefcase, MessageCircle, ArrowUp, Monitor, Server } from 'lucide-react';
 import photo from "../assets/img/photo.jpg"
+import project1 from "../assets/img/project1.png"
+import project2 from "../assets/img/project2.png"
+import project3 from "../assets/img/project3.png"
+
 function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +31,7 @@ function Portfolio() {
         }
       }
     };
-    
+
 
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -51,28 +55,28 @@ function Portfolio() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory management and advanced analytics.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "#",
-      demo: "#"
+      title: "Pathsy Logistics Solutions",
+      description: "A modern, responsive web interface designed for a logistics and supply chain management company. Built entirely with React.js and Tailwind CSS, the platform focuses on delivering a clean and professional user experience.",
+      image: project1,
+      tech: ["React js", "Tailwind css"],
+      github: "https://github.com/vidhisavaliya-1710/PATHSY-LOGISTICS-SOLUTIONS.git",
+      demo: "https://pathsy-logistics-solutions.vercel.app/"
     },
     {
-      title: "AI Dashboard",
-      description: "Modern analytics dashboard with machine learning insights. Built with React and D3.js for interactive data visualizations.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      tech: ["React", "D3.js", "Python", "TensorFlow"],
-      github: "#",
-      demo: "#"
+      title: "The Black Turn",
+      description: "A full-stack music platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js) and styled using Tailwind CSS. The platform provides a sleek and interactive experience for music enthusiasts, with both a public-facing website and an admin dashboard for content and user management.",
+      image: project2,
+      tech: ["React js", "tailwind css", "Node js", "MongoDB", "Express"],
+      github: "https://github.com/mitulbhimani07/TheBlack_Turn.git",
+      demo: "http://theblackturn.in/"
     },
     {
-      title: "Mobile App UI Kit",
-      description: "Comprehensive UI component library for React Native applications. Includes 50+ customizable components with dark mode support.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop",
-      tech: ["React Native", "TypeScript", "Styled Components"],
-      github: "#",
-      demo: "#"
+      title: "Novuscroe Drones",
+      description: "A modern and dynamic website built for showcasing Kisaan Drone solutions in agriculture. Developed using React.js, Tailwind CSS, and SCSS, the platform delivers a clean, futuristic look with smooth theme customization, allowing users to switch between color themes seamlessly.",
+      image: project3,
+      tech: ["React js", "SCSS", "Tailwind css", "MongoDB,", "Node js"],
+      github: "https://github.com/mitulbhimani07/Novuscore-Drone.git",
+      demo: "https://novuscore.co.in/"
     }
   ];
 
@@ -104,7 +108,7 @@ function Portfolio() {
         ></div>
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-amber-600/5 rounded-full blur-2xl animate-pulse-slow"></div>
       </div>
-      
+
 
       {/* Floating Particles */}
       <div className="fixed inset-0 pointer-events-none">
@@ -122,77 +126,117 @@ function Portfolio() {
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-slate-900/95 backdrop-blur-lg border-b border-slate-700/50 shadow-lg' : 'bg-transparent'
-        }`}>
-        <div className="container mx-auto px-6 py-4">
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
+          ? "bg-slate-900/95 backdrop-blur-lg border-b border-slate-700/50 shadow-lg"
+          : "bg-transparent"
+          }`}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-blue-400 animate-slide-right">
+            {/* Logo */}
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-400 animate-slide-right">
               Foram Paneliya
             </div>
-            <div className="hidden md:flex space-x-8">
-              {['hero', 'about', 'skills', 'resume', 'projects', 'contact'].map((section, index) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-all duration-300 hover:text-blue-400 relative group animate-slide-left ${activeSection === section ? 'text-blue-400' : 'text-slate-300'
-                    }`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {section === 'hero' ? 'Home' : section}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-                </button>
-              ))}
+
+            {/* Desktop Nav */}
+            <div className="hidden md:flex space-x-6 lg:space-x-10">
+              {["hero", "about", "skills", "resume", "projects", "contact"].map(
+                (section, index) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className={`capitalize transition-all duration-300 hover:text-blue-400 relative group animate-slide-left ${activeSection === section
+                      ? "text-blue-400"
+                      : "text-slate-300"
+                      }`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {section === "hero" ? "Home" : section}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
+                  </button>
+                )
+              )}
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative">
-        <div className="container mx-auto px-6 text-center z-10">
+      <section
+        id="hero"
+        className="min-h-[90vh] sm:min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8"
+      >
+        <div className="container mx-auto text-center z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 text-slate-100 animate-text-reveal">
-              <span className="inline-block animate-bounce-in" style={{ animationDelay: '0.1s' }}>F</span>
-              <span className="inline-block animate-bounce-in" style={{ animationDelay: '0.2s' }}>o</span>
-              <span className="inline-block animate-bounce-in" style={{ animationDelay: '0.3s' }}>r</span>
-              <span className="inline-block animate-bounce-in" style={{ animationDelay: '0.4s' }}>a</span>
-              <span className="inline-block animate-bounce-in" style={{ animationDelay: '0.5s' }}>m</span>
-              <span className="inline-block animate-bounce-in mx-4" style={{ animationDelay: '0.6s' }}> </span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '0.7s' }}>P</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '0.8s' }}>a</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '0.9s' }}>n</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '1.0s' }}>e</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '1.1s' }}>l</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '1.2s' }}>i</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '1.3s' }}>y</span>
-              <span className="inline-block animate-bounce-in text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400" style={{ animationDelay: '1.4s' }}>a</span>
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 text-slate-100 animate-text-reveal flex flex-wrap justify-center">
+              {/* Animated Letters */}
+              {"Foram Paneliya".split("").map((char, i) => (
+                <span
+                  key={i}
+                  className={`inline-block animate-bounce-in ${char === " "
+                    ? "mx-2 sm:mx-4"
+                    : "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400"
+                    }`}
+                  style={{ animationDelay: `${0.1 * (i + 1)}s` }}
+                >
+                  {char}
+                </span>
+              ))}
             </h1>
-            <div className="animate-typing-container mb-8">
-              <p className="text-xl md:text-2xl text-slate-400 max-w-[990px] mx-auto leading-relaxed animate-typing">
-                Full-Stack Developer crafting scalable, high-performance applications that deliver real impact.              </p>
+
+            {/* Subtitle */}
+            <div className="animate-typing-container mb-6 sm:mb-8 px-4">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-400 max-w-full sm:max-w-[900px] mx-auto leading-relaxed text-center animate-typing">
+                Full-Stack Developer crafting scalable, high-performance applications
+                that deliver real impact.
+              </p>
             </div>
-            <div className="flex justify-center space-x-6 mb-12 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-              <a href="#" className="p-4 bg-slate-800/50 rounded-full  transition-all duration-300 hover:scale-110  group border border-slate-700/50">
-                <Github className="w-6 h-6 text-blue-300 hover:text-emerald-400" />
-              </a>
-              <a href="#" className="p-4 bg-slate-800/50 rounded-full  transition-all duration-300 hover:scale-110  group border border-slate-700/50">
-                <Linkedin className="w-6 h-6 text-blue-300 hover:text-emerald-400" />
-              </a>
-              <a href="#" className="p-4 bg-slate-800/50 rounded-full transition-all duration-300 hover:scale-110 group border border-slate-700/50">
-                <Mail className="w-6 h-6 text-blue-300 hover:text-emerald-400" />
-              </a>
-            </div>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="group flex items-center justify-center mx-auto text-blue-400 hover:text-blue-300 transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: '1.2s' }}
+
+
+
+
+            {/* Social Links */}
+            <div
+              className="flex justify-center space-x-4 sm:space-x-6 mb-8 sm:mb-12 animate-fade-in-up"
+              style={{ animationDelay: "1s" }}
             >
-              <span className="mr-2 text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Discover My Work</span>
-              <ChevronDown className="w-6 h-6 animate-bounce group-hover:translate-y-2 transition-transform" />
+              <a
+                href="https://github.com/forampaneliya"
+                className="p-3 sm:p-4 bg-slate-800/50 rounded-full transition-all duration-300 hover:scale-110 group border border-slate-700/50"
+              >
+                <Github className="w-5 h-5 sm:w-6 sm:h-6 text-blue-300 hover:text-emerald-400" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/foram-paneliya-114267305/"
+                className="p-3 sm:p-4 bg-slate-800/50 rounded-full transition-all duration-300 hover:scale-110 group border border-slate-700/50"
+              >
+                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-300 hover:text-emerald-400" />
+              </a>
+              <a
+                href="mailto:forampaneliya1204@gmail.com"
+                className="p-3 sm:p-4 bg-slate-800/50 rounded-full transition-all duration-300 hover:scale-110 group border border-slate-700/50"
+              >
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-blue-300 hover:text-emerald-400" />
+              </a>
+            </div>
+
+            {/* Discover Button */}
+            <button
+              onClick={() => scrollToSection("about")}
+              className="group flex items-center justify-center mx-auto text-blue-400 hover:text-blue-300 transition-all duration-300 animate-fade-in-up"
+              style={{ animationDelay: "1.2s" }}
+            >
+              <span className="mr-2 text-sm sm:text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                Discover My Work
+              </span>
+              <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-bounce group-hover:translate-y-2 transition-transform" />
             </button>
           </div>
         </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="py-20 bg-slate-800/20 backdrop-blur-sm relative overflow-hidden">
@@ -451,72 +495,72 @@ function Portfolio() {
 
 
       {/* Resume Section */}
-      <section id="resume" className="py-24 bg-gradient-to-b from-slate-900/90 to-slate-900/70 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-slate-100 tracking-wide animate-slide-up">
-              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Resume</span>
-            </h2>
-            <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Highlighting my professional journey, skills, and certification in a modern timeline format.
-            </p>
-          </div>
+        <section id="resume" className="py-24 bg-gradient-to-b from-slate-900/90 to-slate-900/70 relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-6">
+            {/* Section Header */}
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-bold mb-4 text-slate-100 tracking-wide animate-slide-up">
+                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Resume</span>
+              </h2>
+              <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                Highlighting my professional journey, skills, and certification in a modern timeline format.
+              </p>
+            </div>
 
-          {/* Timeline Section */}
-          <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-400 h-full opacity-20"></div>
+            {/* Timeline Section */}
+            <div className="relative">
+              {/* Vertical Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-400 h-full opacity-20"></div>
 
-            {/* Timeline Items */}
-            <div className="space-y-16">
-              {/* Education */}
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="md:w-5/12 order-2 md:order-1 text-right md:pr-10">
-                  <h3 className="text-2xl font-semibold text-blue-300 mb-2">Bachelor of Technology in Computer Science</h3>
-                  <p className="text-slate-400 text-sm">XYZ University, India | 2016 - 2020</p>
-                  <p className="text-slate-300 mt-2">Focused on full-stack development, data structures, and cloud computing. Graduated with First Class Honors.</p>
+              {/* Timeline Items */}
+              <div className="space-y-16">
+                {/* Education */}
+                <div className="flex flex-col md:flex-row items-center justify-between">
+                  <div className="md:w-5/12 order-2 md:order-1 text-right md:pr-10">
+                    <h3 className="text-2xl font-semibold text-blue-300 mb-2">Bachelor of Technology in Computer Science</h3>
+                    <p className="text-slate-400 text-sm">XYZ University, India | 2016 - 2020</p>
+                    <p className="text-slate-300 mt-2">Focused on full-stack development, data structures, and cloud computing. Graduated with First Class Honors.</p>
+                  </div>
+
                 </div>
+
+                {/* Backend Developer */}
+                <div className="flex flex-col md:flex-row items-center justify-between">
+                  <div className="flex items-center justify-center  rounded-full">
+                    <span className="text-slate-900 font-bold"></span>
+                  </div>
+                  <div className="md:w-5/12 md:pl-10 mt-4 md:mt-0">
+                    <h3 className="text-2xl font-semibold text-blue-300 mb-2">Backend Developer</h3>
+                    <p className="text-slate-400 text-sm">Tech Solutions Pvt Ltd | 2022 - Present</p>
+                    <p className="text-slate-300 mt-2">Designing and maintaining APIs, managing databases, and implementing server-side logic using Node.js and MongoDB.</p>
+                  </div>
+                </div>
+
+                {/* Frontend Developer */}
+                <div className="flex flex-col md:flex-row items-center justify-between">
+                  <div className="md:w-5/12 order-2 md:order-1 text-right md:pr-10 mt-4 md:mt-0">
+                    <h3 className="text-2xl font-semibold text-blue-300 mb-2">Frontend Developer</h3>
+                    <p className="text-slate-400 text-sm">Tech Solutions Pvt Ltd | 2022 - Present</p>
+                    <p className="text-slate-300 mt-2">Building responsive and interactive web interfaces using React, Tailwind CSS, and integrating with backend APIs.</p>
+                  </div>
+
+                </div>
+
+                {/* Experience Intern */}
 
               </div>
+            </div>
 
-              {/* Backend Developer */}
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="flex items-center justify-center  rounded-full">
-                  <span className="text-slate-900 font-bold"></span>
-                </div>
-                <div className="md:w-5/12 md:pl-10 mt-4 md:mt-0">
-                  <h3 className="text-2xl font-semibold text-blue-300 mb-2">Backend Developer</h3>
-                  <p className="text-slate-400 text-sm">Tech Solutions Pvt Ltd | 2022 - Present</p>
-                  <p className="text-slate-300 mt-2">Designing and maintaining APIs, managing databases, and implementing server-side logic using Node.js and MongoDB.</p>
-                </div>
+            {/* Certification */}
+            <div className="mt-24 text-center animate-fade-in-up ">
+              <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-6">Certification</h3>
+              <div className="group/link space-x-3 px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-blue-400/50 hover:bg-blue-400/10 transition-all w-4xl mx-auto">
+                <h4 className="text-xl font-bold text-blue-300 mb-4 mt-2">Certified AWS Developer</h4>
+                <p className="text-slate-200 mb-2">Expertise in designing, developing, and deploying cloud applications on AWS.</p>
               </div>
-
-              {/* Frontend Developer */}
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="md:w-5/12 order-2 md:order-1 text-right md:pr-10 mt-4 md:mt-0">
-                  <h3 className="text-2xl font-semibold text-blue-300 mb-2">Frontend Developer</h3>
-                  <p className="text-slate-400 text-sm">Tech Solutions Pvt Ltd | 2022 - Present</p>
-                  <p className="text-slate-300 mt-2">Building responsive and interactive web interfaces using React, Tailwind CSS, and integrating with backend APIs.</p>
-                </div>
-
-              </div>
-
-              {/* Experience Intern */}
-
             </div>
           </div>
-
-          {/* Certification */}
-          <div className="mt-24 text-center animate-fade-in-up ">
-            <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-6">Certification</h3>
-            <div className="group/link space-x-3 px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-blue-400/50 hover:bg-blue-400/10 transition-all w-4xl mx-auto">
-              <h4 className="text-xl font-bold text-blue-300 mb-4 mt-2">Certified AWS Developer</h4>
-              <p className="text-slate-200 mb-2">Expertise in designing, developing, and deploying cloud applications on AWS.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-32  relative overflow-hidden">
@@ -668,18 +712,18 @@ function Portfolio() {
             I’m open to opportunities and collaborations. Reach out via GitHub, LinkedIn, or Email, and let's build something great together.
           </p>
 
-          <div className="flex justify-center gap-8 mb-12">
+          <div className="flex justify-center gap-8 mb-12 ">
             {[
-              { icon: "github", title: "GitHub", url: "https://github.com/yourusername", color: "gray-400" },
-              { icon: "linkedin", title: "LinkedIn", url: "https://linkedin.com/in/yourusername", color: "blue-500" },
-              { icon: "mail", title: "Email", url: "mailto:hello@johndoe.dev", color: "red-500" },
+              { icon: "github", title: "GitHub", url: "https://github.com/forampaneliya", color: "gray-400" },
+              { icon: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com/in/foram-paneliya-114267305/", color: "blue-500" },
+              { icon: "mail", title: "Email", url: "mailto:forampaneliya1204@gmail.com", color: "red-500" },
             ].map((item, index) => (
               <a
                 key={index}
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex flex-col items-center p-6 rounded-xl border border-slate-700/30 bg-slate-800/20 hover:bg-slate-800/40 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-${item.color}/50`}
+                className={`flex flex-col w-2xl hover:shadow-lg hover:shadow-blue-500/20 animate-fade-in-up items-center p-6 rounded-xl border border-slate-700/30 bg-slate-800/20 hover:bg-slate-800/40 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-${item.color}/50`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className={`w-14 h-14 flex items-center justify-center rounded-full bg-${item.color}/20 mb-4`}>
@@ -688,7 +732,6 @@ function Portfolio() {
                   {item.icon === "mail" && <svg className="w-7 h-7 text-slate-100" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l11.985-9.713H.015L12 12.713zm0 2.574l-12-9.713V21h24V5.574l-12 9.713z" /></svg>}
                 </div>
                 <h3 className="text-lg font-semibold text-blue-300 mb-1">{item.title}</h3>
-                <p className="text-slate-400 group-hover:text-slate-200 text-sm break-all">{item.url.replace(/https?:\/\//, '')}</p>
               </a>
             ))}
           </div>
