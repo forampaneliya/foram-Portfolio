@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, ExternalLink, Code, Palette, Zap, User, Briefcase, MessageCircle, ArrowUp, Monitor, Server } from 'lucide-react';
-
+import photo from "../assets/img/photo.jpg"
 function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -287,7 +287,7 @@ function Portfolio() {
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-emerald-400/20 to-amber-400/20 rounded-3xl blur-xl animate-pulse-slow"></div>
                     <div className="relative bg-slate-800/30 backdrop-blur-sm rounded-3xl p-2 border border-slate-700/30">
                       <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+                        src={photo}
                         alt="Profile"
                         className="w-full h-96 object-cover rounded-2xl"
                       />
