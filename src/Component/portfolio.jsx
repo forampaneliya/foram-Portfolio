@@ -564,10 +564,11 @@ function Portfolio() {
           </div>
 
           {/* Certification */}
-          <a href="https://www.linkedin.com/posts/foram-paneliya-114267305_certificate-activity-7298290568831401991-nBud?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3QfeABA-PSHpWU8_CNjnM2pT4wtT-QZ3s" className="mt-16 md:mt-32 text-center">
-            <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-6 md:mb-8">
+          <div  className="mt-16 md:mt-32 text-center">
+            <h3 className="text-2xl  sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-6 md:mb-8">
               Certification
             </h3>
+            <a href="https://www.linkedin.com/posts/foram-paneliya-114267305_certificate-activity-7298290568831401991-nBud?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3QfeABA-PSHpWU8_CNjnM2pT4wtT-QZ3s">
             <div className="p-6 sm:p-8 bg-slate-800/40 border border-slate-700/40 rounded-2xl backdrop-blur-sm hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-400/30 transition max-w-2xl mx-auto">
               <h4 className="text-lg sm:text-xl font-bold text-blue-300 mb-3 sm:mb-4">
                 Certified TECHWAR
@@ -576,7 +577,8 @@ function Portfolio() {
                 Designing with HTML & CSS — TechWar
                 Demonstrated skills in creating responsive and visually appealing web layouts using HTML5 and CSS3. Gained experience in mobile-first design, CSS grid & flexbox, and styling best practices.              </p>
             </div>
-          </a>
+            </a>
+          </div>
         </div>
       </section>
 
