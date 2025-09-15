@@ -158,7 +158,7 @@ function Portfolio() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden text-slate-300 hover:text-blue-400 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -216,9 +216,8 @@ function Portfolio() {
 
             {/* Subtitle */}
             <div className="animate-typing-container mb-6 sm:mb-8 px-2 sm:px-4">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-400 max-w-full sm:max-w-[900px] mx-auto leading-relaxed text-center animate-typing">
-                Full-Stack Developer crafting scalable, high-performance applications
-                that deliver real impact.
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-400 max-w-full sm:max-w-[250px] mx-auto leading-relaxed text-center animate-typing">
+                Full-Stack Developer
               </p>
             </div>
 
@@ -264,77 +263,77 @@ function Portfolio() {
 
       {/* About Section */}
       <section id="about" className="py-16 md:py-20 bg-slate-800/20 backdrop-blur-sm relative overflow-hidden">
-  <div className="absolute inset-0 opacity-3">
-    <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-20 right-10 w-64 h-64 bg-emerald-400 rounded-full blur-3xl"></div>
-  </div>
-
-  <div className="container mx-auto px-4 sm:px-6 relative z-10">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-center text-slate-100 animate-slide-up">
-        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-          Me
-        </span>
-      </h2>
-
-      <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-        {/* Content Side */}
-        <div className="space-y-6 md:space-y-8 animate-slide-right">
-          <div className="space-y-4 md:space-y-6">
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              I'm a passionate <span className="text-blue-400 font-semibold">Full-Stack Developer</span> with expertise in modern web technologies. I specialize in creating scalable applications using React, Node.js, and cloud technologies, transforming complex challenges into elegant, user-centric solutions.
-            </p>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              My development journey spans frontend frameworks, backend APIs, database design, and DevOps practices. I'm committed to writing clean, efficient code and staying updated with the latest industry trends and best practices.
-            </p>
-          </div>
-
-         
-
-          {/* CTA Button */}
-          <div className="pt-2 sm:pt-4">
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2 group text-sm sm:text-base"
-            >
-              <span>Let's Connect</span>
-              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 group-hover:rotate-12 transition-transform" />
-            </button>
-          </div>
+        <div className="absolute inset-0 opacity-3">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-emerald-400 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Image Side */}
-        <div className="relative animate-slide-left mt-8 lg:mt-0">
-          <div className="relative max-w-md mx-auto">
-            {/* Main Image Container */}
-            <div className="relative z-10">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-emerald-400/20 to-amber-400/20 rounded-3xl blur-xl animate-pulse-slow"></div>
-              <div className="relative bg-slate-800/30 backdrop-blur-sm rounded-3xl p-2 border border-slate-700/30">
-                <img
-                  src={photo}
-                  alt="Profile"
-                  className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-2xl"
-                />
-                <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-center text-slate-100 animate-slide-up">
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                Me
+              </span>
+            </h2>
+
+            <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+              {/* Content Side */}
+              <div className="space-y-6 md:space-y-8 animate-slide-right">
+                <div className="space-y-4 md:space-y-6">
+                  <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+                    I'm a passionate <span className="text-blue-400 font-semibold">Full-Stack Developer</span> with expertise in modern web technologies. I specialize in creating scalable applications using React, Node.js, and cloud technologies, transforming complex challenges into elegant, user-centric solutions.
+                  </p>
+                  <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+                    My development journey spans frontend frameworks, backend APIs, database design, and DevOps practices. I'm committed to writing clean, efficient code and staying updated with the latest industry trends and best practices.
+                  </p>
+                </div>
+
+
+
+                {/* CTA Button */}
+                <div className="pt-2 sm:pt-4">
+                  <button
+                    onClick={() => scrollToSection('contact')}
+                    className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2 group text-sm sm:text-base"
+                  >
+                    <span>Let's Connect</span>
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 group-hover:rotate-12 transition-transform" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Image Side */}
+              <div className="relative animate-slide-left mt-8 lg:mt-0">
+                <div className="relative max-w-md mx-auto">
+                  {/* Main Image Container */}
+                  <div className="relative z-10">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-emerald-400/20 to-amber-400/20 rounded-3xl blur-xl animate-pulse-slow"></div>
+                    <div className="relative bg-slate-800/30 backdrop-blur-sm rounded-3xl p-2 border border-slate-700/30">
+                      <img
+                        src={photo}
+                        alt="Profile"
+                        className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-2xl"
+                      />
+                      <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                    </div>
+                  </div>
+                  {/* Decorative Lines */}
+                  <div className="absolute -z-10 top-1/4 -left-8 sm:-left-12 w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-400/50 to-transparent animate-pulse"></div>
+                  <div className="absolute -z-10 bottom-1/4 -right-8 sm:-right-12 w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+                  {/* Background Geometric Shapes */}
+                  <div className="absolute -z-20 top-0 left-1/2 transform -translate-x-1/2 -translate-y-6 sm:-translate-y-8">
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 border border-slate-700/30 rounded-full animate-spin-slow"></div>
+                  </div>
+                  <div className="absolute -z-20 bottom-0 right-0 transform translate-x-4 sm:translate-x-8 translate-y-4 sm:translate-y-8">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 border border-slate-700/30 rotate-45 animate-float"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            {/* Decorative Lines */}
-            <div className="absolute -z-10 top-1/4 -left-8 sm:-left-12 w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-400/50 to-transparent animate-pulse"></div>
-            <div className="absolute -z-10 bottom-1/4 -right-8 sm:-right-12 w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-            {/* Background Geometric Shapes */}
-            <div className="absolute -z-20 top-0 left-1/2 transform -translate-x-1/2 -translate-y-6 sm:-translate-y-8">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 border border-slate-700/30 rounded-full animate-spin-slow"></div>
-            </div>
-            <div className="absolute -z-20 bottom-0 right-0 transform translate-x-4 sm:translate-x-8 translate-y-4 sm:translate-y-8">
-              <div className="w-16 h-16 sm:w-24 sm:h-24 border border-slate-700/30 rotate-45 animate-float"></div>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-16 md:py-20 relative">
@@ -496,15 +495,12 @@ function Portfolio() {
                 <div className="md:w-5/12 text-center md:text-right md:pr-6 lg:pr-10 ">
                   <div className="p-4 sm:p-6 bg-slate-800/40 border border-slate-700/40 rounded-2xl backdrop-blur-sm  hover:shadow-lg hover:shadow-blue-400/30 transition">
                     <h3 className="text-xl sm:text-2xl font-semibold text-blue-300 mb-2">
-                      Bachelor of Technology in Computer Science
-                    </h3>
+                      Bachelor of Computer Applications                    </h3>
                     <p className="text-slate-400 text-xs sm:text-sm">
-                      XYZ University, India | 2016 - 2020
+                      BHAKTA KAVI NARSINH MEHTA UNIVERSITY, India | 2022 - 2024
                     </p>
                     <p className="text-slate-300 mt-3 leading-relaxed text-sm sm:text-base">
-                      Focused on full-stack development, data structures, and cloud
-                      computing. Graduated with First Class Honors.
-                    </p>
+                      Focused on web development, database management, and web technologies. Completed the program with First Class Honors.                    </p>
                   </div>
                 </div>
 
@@ -529,7 +525,7 @@ function Portfolio() {
                       Backend Developer
                     </h3>
                     <p className="text-slate-400 text-xs sm:text-sm">
-                      Tech Solutions Pvt Ltd | 2022 - Present
+
                     </p>
                     <p className="text-slate-300 mt-3 leading-relaxed text-sm sm:text-base">
                       Designing and maintaining APIs, managing databases, and
@@ -553,7 +549,6 @@ function Portfolio() {
                       Frontend Developer
                     </h3>
                     <p className="text-slate-400 text-xs sm:text-sm">
-                      Tech Solutions Pvt Ltd | 2022 - Present
                     </p>
                     <p className="text-slate-300 mt-3 leading-relaxed text-sm sm:text-base">
                       Building responsive and interactive web interfaces using React,
@@ -569,20 +564,19 @@ function Portfolio() {
           </div>
 
           {/* Certification */}
-          <div className="mt-16 md:mt-32 text-center">
+          <a href="https://www.linkedin.com/posts/foram-paneliya-114267305_certificate-activity-7298290568831401991-nBud?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3QfeABA-PSHpWU8_CNjnM2pT4wtT-QZ3s" className="mt-16 md:mt-32 text-center">
             <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-6 md:mb-8">
               Certification
             </h3>
             <div className="p-6 sm:p-8 bg-slate-800/40 border border-slate-700/40 rounded-2xl backdrop-blur-sm hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-400/30 transition max-w-2xl mx-auto">
               <h4 className="text-lg sm:text-xl font-bold text-blue-300 mb-3 sm:mb-4">
-                Certified AWS Developer
+                Certified TECHWAR
               </h4>
               <p className="text-slate-200 leading-relaxed text-sm sm:text-base">
-                Expertise in designing, developing, and deploying cloud applications
-                on AWS with strong knowledge in scalable architecture and automation.
-              </p>
+                Designing with HTML & CSS — TechWar
+                Demonstrated skills in creating responsive and visually appealing web layouts using HTML5 and CSS3. Gained experience in mobile-first design, CSS grid & flexbox, and styling best practices.              </p>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -778,7 +772,7 @@ function Portfolio() {
       )}
 
       {/* Footer */}
-      
+
 
       <style jsx>{`
         @keyframes float {
