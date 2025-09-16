@@ -215,11 +215,12 @@ function Portfolio() {
             </h1>
 
             {/* Subtitle */}
-            <div className="animate-typing-container mb-6 sm:mb-8 px-2 sm:px-4">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-400 max-w-full sm:max-w-[250px] mx-auto leading-relaxed text-center animate-typing">
-                Full-Stack Developer
-              </p>
-            </div>
+           <div className="animate-typing-container mb-6 sm:mb-8 px-2 sm:px-4">
+  <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-400 w-full max-w-fit mx-auto leading-relaxed text-center animate-typing">
+    Full-Stack Developer
+  </p>
+</div>
+
 
             {/* Social Links */}
             <div
