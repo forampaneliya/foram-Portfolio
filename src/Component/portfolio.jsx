@@ -133,9 +133,9 @@ function Portfolio() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-400 animate-slide-right">
+            <a href="#" className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-400 animate-slide-right">
               Foram Paneliya
-            </div>
+            </a>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex space-x-6 lg:space-x-10">
