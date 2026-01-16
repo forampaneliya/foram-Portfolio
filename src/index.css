@@ -1,1 +1,52 @@
 @import "tailwindcss";
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Core dot */
+.holi-cursor-core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Glow / Holi effect */
+.holi-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 150, 0.35),
+    rgba(0, 200, 255, 0.35),
+    rgba(0, 255, 150, 0.25),
+    transparent 70%
+  );
+  filter: blur(8px);
+  animation: holiHue 6s linear infinite;
+}
+
+@keyframes holiHue {
+  0% {
+    filter: hue-rotate(0deg) blur(8px);
+  }
+  100% {
+    filter: hue-rotate(360deg) blur(8px);
+  }
+}
+
+
