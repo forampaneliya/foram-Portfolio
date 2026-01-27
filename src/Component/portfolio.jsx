@@ -2,11 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, ExternalLink, Terminal, X, Minimize2, Maximize2, Folder, FileText } from 'lucide-react';
 import { Instagram } from 'react-feather';
 
-
-
-
-
-
 export default function Portfolio() {
   const [isMaximized, setIsMaximized] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
