@@ -246,7 +246,7 @@ export default function Portfolio() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400 mb-4">
                 ╔══════════════════════════╗<br />
                 ║&nbsp;&nbsp;ABOUT_ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║<br />
-                ╚══════════════════════════╝
+                 
               </h2>
             </div>
 
