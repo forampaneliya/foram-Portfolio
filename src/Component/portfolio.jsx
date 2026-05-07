@@ -140,7 +140,7 @@ export default function Portfolio() {
         'A modern fintech/escrow technology platform featuring a clean single-page React architecture with seamless hash routing, fully responsive layouts, and a polished professional UI.',
       tech: ['React.js', 'Tailwind CSS', 'React Router', 'SPA', 'Fintech'],
       github: null,
-      demo: 'https://escrow-ind.com/',
+      demo: null,
     },
   ];
 
